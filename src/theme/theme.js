@@ -16,12 +16,27 @@ const theme = createTheme({
         },
         secondary: {
             main: '#A084CA'
-        }, 
+        },
         third: {
             main: '#BFACE0'
-        }, 
+        },
         fourth: {
             main: '#EBC7E8'
+        },
+        fifth: {
+            main: '#E3E3E3'
+        },
+        sixth: {
+            main: '#3751FF'
+        },
+        seventh: {
+            main: '#D1310F'
+        },
+        eighth: {
+            main: '#FCFCFC'
+        },
+        nineth: {
+            main: '#4497FA'
         }
     },
     overrides: {
@@ -43,7 +58,7 @@ const theme = createTheme({
 const Theme = ({ children }) => (
     <ThemeProvider theme={theme}>
         <CssBaseline />
-        { children }
+        {children}
     </ThemeProvider>
 )
 export default Theme;
