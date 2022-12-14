@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
+
 const useStyles = makeStyles(theme => ({
     main: {
         position: "relative",
@@ -28,7 +29,7 @@ const useStyles = makeStyles(theme => ({
         border: " solid 0px gray",
         borderRadius: "8px",
         color: "aliceblue",
-        background: " #3751FF",
+        background:theme.palette.sixth.main,
         boxShadow: "0px 4px 12px rgba(55, 81, 255, 0.24)",
         width: "316px",
         height: "48px"
@@ -36,14 +37,15 @@ const useStyles = makeStyles(theme => ({
     cardInfo: {
         width: "fit-content",
         display: "flex",
-        border: " solid 2px #E3E3E3",
+        border: " solid 2px ",
+        borderColor:theme.palette.fifth.main,
         borderRadius: "8px",
         alignItems: "center"
     },
     buttonDelete: {
         border: "2px",
         borderRadius: '8px',
-        background: "#D1310F",
+        background:theme.palette.seventh.main,
         margin: "2px",
         zIndex: "1200",
         width: "40px",
@@ -51,7 +53,7 @@ const useStyles = makeStyles(theme => ({
 
     },
     deleteIcom: {
-        color: "#FCFCFC"
+        color: theme.palette.eighth.main
 
     },
     inputButton: {
@@ -70,7 +72,7 @@ const useStyles = makeStyles(theme => ({
             display: "flex",
             width: "316px",
             height: "48px",
-            backgroundColor: "#3751FF",
+            background:theme.palette.sixth.main,
             borderRadius: "8px",
             border: " solid 0px gray",
             margin: "0x",

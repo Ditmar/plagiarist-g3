@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
         height: "60px",
         borderRadius: "6px",
         color: "aliceblue",
-        background: " #4497FA",
+        background:theme.palette.nineth.main,
         margin: "5px",
         padding: "10px"
 
