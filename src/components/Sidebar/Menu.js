@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Menu.scss";
+import "./Menu.css";
 import logo from "./iconos/logo.png";
 import Button from "./iconos/Button";
 import SettingsIcon from '@mui/icons-material/Settings';
