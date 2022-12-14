@@ -5,6 +5,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Login from './pages/login';
+import {Register} from './pages/Register/Register';
 import Dashboard from './components/DashboardComponent/Dashboard';
 import UploadComponent from './components/UploadComponent';
 import LoaderComponent from './components/LoaderComponent';
@@ -50,6 +51,7 @@ function App() {
                 </Dashboard>
               </> } />
               <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
             </Routes>
           </BrowserRouter>
         </LoaderSpinnerContextProvider>
