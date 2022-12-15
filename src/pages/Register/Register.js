@@ -6,18 +6,10 @@ import Visibility from '@material-ui/icons/Visibility';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
+import useStyles from './register.styles';
 
 export const Register = () => {
-    const paperStyle = { padding: '30px 20px', width: 420, margin: '40px auto', elevation: '20px' };
-    const headerStyle = { margin: 0, fontSize: '19px' };
-    const avatarStyle = { backgroundColor: '#3751FF' };
-    const typeFont = { fontFamily : 'arial' };
-    const sizeFont = { fontSize : '19px' };
-    const sizeFontSecondary = { fontSize : '12px' };
-    const colorFont = { color : '#A4A6B3' };
-    const opacityFont = { opacity : '0.7'};
-    const borderLabel = { borderRadius : '8px'};
-
+  const classes = useStyles();
     const [values, setValues] = React.useState({
         password: '',
         showPassword: false,
@@ -36,20 +28,20 @@ export const Register = () => {
       };
     return (
         <Grid>
-            <Paper style = {paperStyle}>
+            <Paper style = {classes.paperStyle}>
                 <Grid align = 'center' >
-                    <Avatar style = {avatarStyle}></Avatar>
-                    <Typography variant = 'caption' gutterBottom style = {{...typeFont, ...sizeFont, ...colorFont, ...opacityFont}}>Plagio Control</Typography>
+                    <Avatar style = {classes.avatarStyle}></Avatar>
+                    <Typography variant = 'caption' gutterBottom style = {{...classes.typeFont, ...classes.sizeFont, ...classes.colorFont, ...classes.opacityFont}}>Plagio Control</Typography>
                     <br /><br />
-                    <h2 style = {headerStyle}>Sign in Plagio Control</h2>
-                    <Typography variant = 'caption' gutterBottom style = {{...typeFont, ...sizeFontSecondary, ...colorFont, ...opacityFont}}>Enter your email and password below</Typography>
+                    <h2 style = {classes.headerStyle}>Sign in Plagio Control</h2>
+                    <Typography variant = 'caption' gutterBottom style = {{...classes.typeFont, ...classes.sizeFontSecondary, ...classes.colorFont, ...classes.opacityFont}}>Enter your email and password below</Typography>
                 </Grid>
                 <br/>
-                <form style = {{margin: '20px', ...typeFont}}>
-                    <InputLabel htmlFor = 'standard-adornment-email' style = {{...typeFont, ...sizeFontSecondary, ...colorFont, ...opacityFont}}>EMAIL</InputLabel>
-                    <OutlinedInput id = 'outlined-basic' fullWidth label = 'Email' size = 'small' variant = 'outlined' placeholder = 'Email address' style={{height: '40px', fontSize: '14px', ...borderLabel}} />
+                <form style = {{margin: '20px', ...classes.typeFont}}>
+                    <InputLabel htmlFor = 'standard-adornment-email' style = {{...classes.typeFont, ...classes.sizeFontSecondary, ...classes.colorFont, ...classes.opacityFont}}>EMAIL</InputLabel>
+                    <OutlinedInput id = 'outlined-basic' fullWidth label = 'Email' size = 'small' variant = 'outlined' placeholder = 'Email address' style={{height: '40px', fontSize: '14px', ...classes.borderLabel}} />
                     <br /><br />
-                    <InputLabel htmlFor='standard-adornment-password' style={{...typeFont, ...sizeFontSecondary, ...colorFont, ...opacityFont}}>PASSWORD</InputLabel>
+                    <InputLabel htmlFor='standard-adornment-password' style={{...classes.typeFont, ...classes.sizeFontSecondary, ...classes.colorFont, ...classes.opacityFont}}>PASSWORD</InputLabel>
                     <OutlinedInput
                         fullWidth
                         placeholder='Password'
@@ -69,7 +61,7 @@ export const Register = () => {
                         }
                     />
                     <br /><br />
-                    <InputLabel htmlFor='standard-adornment-password' style={{...typeFont, ...sizeFontSecondary, ...colorFont, ...opacityFont}}>RE. PASSWORD</InputLabel>
+                    <InputLabel htmlFor='standard-adornment-password' style={{...classes.typeFont, ...classes.sizeFontSecondary, ...classes.colorFont, ...classes.opacityFont}}>RE. PASSWORD</InputLabel>
                     <OutlinedInput
                         fullWidth
                         placeholder='Repeat password'
@@ -89,9 +81,9 @@ export const Register = () => {
                         }
                     />
                     <br /><br />                                
-                    <Button fullWidth type='submit' variant='contained' color='primary' style={{background: '#3751FF', ...typeFont, ...sizeFontSecondary, ...borderLabel}}>Sign in</Button>   
+                    <Button fullWidth type='submit' variant='contained' color='primary' style={{background: '#3751FF', ...classes.typeFont, ...classes.sizeFontSecondary, ...classes.borderLabel}}>Sign in</Button>   
                     <center>
-                    <p  style={{...typeFont, ...sizeFontSecondary, ...colorFont, ...opacityFont}}>You do not have an account?  <a href='/' >Login</a> </p>
+                    <p  style={{...classes.typeFont, ...classes.sizeFontSecondary, ...classes.colorFont, ...classes.opacityFont}}>You do not have an account?  <a href='/' >Login</a> </p>
                     </center>                              
                 </form>
             </Paper>
