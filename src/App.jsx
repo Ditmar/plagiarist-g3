@@ -9,6 +9,7 @@ import {Register} from './pages/Register/Register';
 import Dashboard from './components/DashboardComponent/Dashboard';
 import UploadComponent from './components/UploadComponent';
 import LoaderComponent from './components/LoaderComponent';
+import MenuComponent from './components/Sidebar/MenuComponent';
 import LoaderSpinnerContextProvider from './context/LoaderSpinnerContextProvider';
 import Detail from './pages/detail';
 function App() {
@@ -31,14 +32,13 @@ function App() {
   return (
     
       <Theme>
+        
         <LoaderSpinnerContextProvider>
           <BrowserRouter>
             <LoaderComponent />
             <Routes>
               <Route path="/" element={<>
-                <Dashboard> 
-                  <p>content </p> 
-                </Dashboard>
+                <MenuComponent />                
               </>}/>
               <Route path="/upload" element={<>
                 <Dashboard> 
