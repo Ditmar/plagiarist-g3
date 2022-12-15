@@ -26,11 +26,8 @@ import IconButton from '@mui/material/IconButton';
 import CssBaseline from '@mui/material/CssBaseline';
 import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
-import { ResponsiveContainer } from 'recharts';
-import Latestdocument from './Latestdocument';
-
-
-
+import Latestdocument from './components/LatestDocuments/index';
+import {estilos} from './app.styles';
 
 function App() {
 
@@ -42,7 +39,8 @@ function App() {
       
     </Box>
   );
-
+  const classes = estilos();
+ 
   return (
     <Theme>
       <LoaderSpinnerContextProvider>
@@ -57,20 +55,23 @@ function App() {
                     <React.Fragment>
                       <CssBaseline />
                       <Container maxWidth="full" >
-                        <Box sx={{ bgcolor: 'white', height: '100%' , borderRadius: '0.5rem', border: '0.063rem solid #DFE0EB'}}>
+                        <Box className={classes.fondo} > 
+                        
                           <Box sx={{ padding: '10px'}}>
                             <Typography variant="h5" component="div" sx={{ fontWeight: 'bold' ,fontSize: '1.6rem' }}>
                              
                               Ultimos Documentos Publicados
                                
                             </Typography>
-                            <Typography sx={{ mb: 1.5, fontSize: '0.8rem' }}>
-                              <span sx={{ color: '#808080' }}> Group: </span> <span sx={{ color: 'black' }}>Support</span>
+                            <Typography className={classes.support}
+                            >
+                              <span > Group: </span> <span>Support</span>
                             </Typography>
                           </Box>
 
-                          <List sx={{ width: '100%', bgcolor: 'background.paper', padding: '10px', borderRadius: '0.5rem', border: '0.063rem solid #DFE0EB'}}
+                          <List className={classes.li}
                           >
+                            
                            <Latestdocument/>
                           </List>
 
