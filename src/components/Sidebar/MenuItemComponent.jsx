@@ -17,7 +17,6 @@ const MenuItemComponent =(props)=> {
         <Icon
           fill={active ? "#DDE2FF" : "#9FA2B4"}
           opacity={!active &&   "0.4"}
-         
         />
         <span 
 

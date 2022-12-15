@@ -1,5 +1,46 @@
 import {Button} from '@material-ui/core'
 import {makeStyles, withStyles} from '@material-ui/styles';
+
+export const useStyles= makeStyles(() => ({
+  container: {
+      marginLeft: 32,
+      marginRight: 32,
+  },
+  title: {
+      marginLeft: 12,
+  },
+  activeContainer: {
+      backgroundColor: "rgba(221,226,255, 0.08)",
+      borderLeft: "3px solid #DDE2FF",
+    },
+  
+    activeBar: {
+      borderLeft: "3px solid #DDE2FF",
+    },
+    activeTitle: {
+      color: "#A4A6B3",
+    
+    },
+   
+    title: {
+     
+      fontFamily: "Muli",
+      fontSize: 16,
+      lineHeight: "1.25rem",
+      letterSpacing: "0.01rem",
+     
+      marginLeft: 24,
+      color: "#A4A6B3",
+    },
+  
+  separator: {
+      borderTop: '1px solid #DFE0EB',
+      marginTop: 16,
+      marginBottom: 16,
+      opacity: 0.06
+  }
+}));
+
 export const BootstrapButton = withStyles({
     root: {
         textTransform: 'none',
@@ -28,43 +69,5 @@ export const BootstrapButton = withStyles({
       },
     },
   })(Button);
-export const useStyles= makeStyles(() => ({
-    container: {
-        marginLeft: 32,
-        marginRight: 32,
-    },
-    title: {
-        marginLeft: 12,
-    },
-    activeContainer: {
-        backgroundColor: "rgba(221,226,255, 0.08)",
-        borderLeft: "3px solid #DDE2FF",
-      },
-    
-      activeBar: {
-        borderLeft: "3px solid #DDE2FF",
-      },
-      activeTitle: {
-        color: "#A4A6B3",
-      
-      },
-     
-      title: {
-       
-        fontFamily: "Muli",
-        fontSize: 16,
-        lineHeight: "1.25rem",
-        letterSpacing: "0.01rem",
-       
-        marginLeft: 24,
-        color: "#A4A6B3",
-      },
-    
-    separator: {
-        borderTop: '1px solid #DFE0EB',
-        marginTop: 16,
-        marginBottom: 16,
-        opacity: 0.06
-    }
-}));
+
 

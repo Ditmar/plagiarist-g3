@@ -12,48 +12,6 @@ import { useStyles } from "./menu.styles";
 import { slide as Menu } from "react-burger-menu";
 import useMenuComponent from "./useMenuComponent";
 
-const styles = {
-  bmBurgerButton: {
-    position: "absolute",
-    width: 26,
-    height: 20,
-    left: 24,
-    top: 20,
-  },
-  bmBurgerBars: {
-    background: "#373a47",
-  },
-  bmBurgerBarsHover: {
-    background: "#a90000",
-  },
-  bmCrossButton: {
-    display: "none",
-  },
-  bmCross: {
-    background: "#bdc3c7",
-  },
-  bmMenuWrap: {
-    position: "fixed",
-    height: "100%",
-    width: 255,
-  },
-  bmMenu: {
-    background: "#373a47",
-  },
-  bmItem: {
-    outline: "none",
-    ":focus": {
-      outline: "none",
-    },
-  },
-  bmMorphShape: {
-    fill: "#373a47",
-  },
-  bmOverlay: {
-    background: "rgba(0, 0, 0, 0.3)",
-  },
-};
-
 const MenuComponent = () => {
   const classes = useStyles();
   const {
@@ -120,6 +78,48 @@ const MenuComponent = () => {
       />
     </Menu>
   );
+};
+
+const styles = {
+  bmBurgerButton: {
+    position: "absolute",
+    width: 26,
+    height: 20,
+    left: 24,
+    top: 20,
+  },
+  bmBurgerBars: {
+    background: "#373a47",
+  },
+  bmBurgerBarsHover: {
+    background: "#a90000",
+  },
+  bmCrossButton: {
+    display: "none",
+  },
+  bmCross: {
+    background: "#bdc3c7",
+  },
+  bmMenuWrap: {
+    position: "fixed",
+    height: "100%",
+    width: 255,
+  },
+  bmMenu: {
+    background: "#373a47",
+  },
+  bmItem: {
+    outline: "none",
+    ":focus": {
+      outline: "none",
+    },
+  },
+  bmMorphShape: {
+    fill: "#373a47",
+  },
+  bmOverlay: {
+    background: "rgba(0, 0, 0, 0.3)",
+  },
 };
 
 export default MenuComponent;
